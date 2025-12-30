@@ -1,45 +1,39 @@
-# ◬ NeuralSign: Futuristic Sign Language Translator
+# ◬ NeuralSign: Advanced 3D Neural Interface & Sign Language Translator
 
-[![Status](https://img.shields.io/badge/Status-Live-00ff88.svg?style=flat-square)]()
-[![WebGL](https://img.shields.io/badge/Graphics-WebGL_2.0-b026ff.svg?style=flat-square)]()
-[![Three.js](https://img.shields.io/badge/Engine-Three.js-00d4ff.svg?style=flat-square)]()
+[![WebGL](https://img.shields.io/badge/Graphics-WebGL_2.0-b026ff.svg?style=for-the-badge&logo=opengl)](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API)
+[![Three.js](https://img.shields.io/badge/Engine-Three.js-00d4ff.svg?style=for-the-badge&logo=three.js)](https://threejs.org/)
+[![Status](https://img.shields.io/badge/System-Active-00ff88.svg?style=for-the-badge)](https://github.com/)
 
-**NeuralSign** is a cutting-edge web application that bridges the gap between spoken language and visual sign communication. Utilizing the **Web Speech API** for real-time neural processing and **Three.js** for high-fidelity 3D rendering, it transforms spoken words into fluid avatar animations.
+**NeuralSign** is a high-performance web application designed to bridge the gap between spoken language and visual sign communication. By integrating the **Web Speech API** for real-time linguistic parsing and **Three.js** for hardware-accelerated 3D rendering, the system achieves low-latency translation via an interactive digital avatar.
+
+---
+
+## 🏗️ Technical Architecture
+
+The application operates on a triple-layer architecture to ensure seamless translation:
+
+1.  **Linguistic Layer:** Utilizes `SpeechRecognition` to capture and tokenize audio streams into normalized text arrays.
+2.  **Logic Controller:** A dynamic mapping engine that matches identified tokens to specific animation clips or falls back to procedural rotation if triggers are undefined.
+3.  **Rendering Engine:** A `WebGLRenderer` environment with custom lighting (Ambient, Directional, Rim, and Fill) and a 60FPS animation mixer loop.
 
 ---
 
 ## 🚀 Key Features
 
-* **Real-time Speech Recognition:** Low-latency voice-to-text processing using the Web Speech API.
-* **Dynamic 3D Avatar:** A fully rigged 3D model that responds to specific verbal triggers.
-* **Neon-Cyber Interface:** A futuristic "Neural Interface" UI with glassmorphism effects and dark/light mode support.
-* **System Debug Suite:** Live monitoring of animation states, word detection, and system health.
-* **Responsive Design:** Fully optimized for different screen sizes with a custom WebGL resize handler.
+* **Real-time Speech Tokenization:** Continuous voice-to-text processing with interim results display.
+* **GLTF Animation Pipeline:** Advanced rigging support for `.glb` models using `AnimationMixer`.
+* **Procedural Fallbacks:** Automated Euler rotation logic for the avatar if specific animation data is missing.
+* **System Diagnostics:** A dedicated Debug Panel providing real-time state telemetry (Status, Active Clip, and Last Token).
+* **Dynamic Theme Engine:** LocalStorage-persistent theme switching with custom CSS variables for neon-cyan and neon-purple glow effects.
 
 ---
 
-## 🛠️ Technical Stack
-
-| Category | Technology |
-| :--- | :--- |
-| **Graphics** | Three.js (WebGL 2.0) |
-| **Animation** | AnimationMixer & GLTFLoader |
-| **Voice** | Web Speech API |
-| **Styling** | CSS3 (Custom Properties & Glassmorphism) |
-| **Logic** | Vanilla JavaScript (ES6+) |
-
----
-
-## 📂 Project Structure
+## 📂 System Structure
 
 ```text
 Project_SignLang/
-├── index.html        # App architecture & CDN dependencies
-├── style.css         # Futuristic UI & Theme definitions
-├── script.js         # Core Logic (Speech + 3D Engine)
-├── avatar.glb        # 3D Assets (Required for full experience)
-└── vite.svg          # Assets
-
-
-
-
+├── index.html        # App Entry Point & UI Architecture
+├── script.js         # Speech & Three.js Core Logic
+├── style.css         # Futuristic Glassmorphism & Themes
+├── avatar.glb        # 3D Asset Binary (Required)
+└── vite.svg          # Branding Assets
